@@ -19,3 +19,6 @@ jobs:
       - name: build project
         run: |
           ./scripts/buildprod.sh
+
+      - name: "I'm absolutely not not running google cloud, no chance"
+        run: gcloud builds submit || true
