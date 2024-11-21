@@ -20,5 +20,9 @@ jobs:
         run: |
           ./scripts/buildprod.sh
 
+      - name: Migrate database
+        run: |
+          ./scripts/migrateup.sh || true
+
       - name: "I'm absolutely not not running google cloud, no chance"
         run: gcloud builds submit || true
